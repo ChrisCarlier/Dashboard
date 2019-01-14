@@ -3879,11 +3879,10 @@
 		background-color: #1E2832;
 		color: rgba(255, 255, 255, 0.75);
 		background-attachment: fixed;
-		background-image: url("images/overlay.png"), url("../../images/banner.jpg");
+		background-image: url("images/overlay.png"), url("../../images/dark-banner.jpg");
 		background-size: cover;
 		text-align: center;
 	}
-
 		#banner input, #banner select, #banner textarea {
 			color: #fff;
 		}
@@ -3897,7 +3896,7 @@
 		}
 
 		#banner h1, #banner h2, #banner h3, #banner h4, #banner h5, #banner h6 {
-			color: #fff;
+			color: #66b2b2;
 		}
 
 		#banner blockquote {
@@ -3918,9 +3917,9 @@
 		#banner input[type="button"],
 		#banner button,
 		#banner .button {
-			background-color: #fff;
-			box-shadow: none;
-			color: #1E2832 !important;
+			background-color: #66b2b2;
+			/*box-shadow: none;
+			color: #1E2832 !important;*/
 		}
 
 			#banner input[type="submit"].icon:before,
@@ -3937,6 +3936,7 @@
 			#banner button:hover,
 			#banner .button:hover {
 				background-color: white;
+				color: #66b2b2 !important;
 			}
 
 			#banner input[type="submit"]:active,
