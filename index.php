@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE HTML>
 
 <html>
@@ -64,7 +67,7 @@
 				</div>
 			</section>
 		-->
-		<!-- Two 
+		<!-- Two -->
 			<section id="two" class="wrapper special">
 				<div class="inner">
 					<header class="major narrow">
@@ -86,7 +89,7 @@
 					</ul>
 				</div>
 			</section>
-		-->
+		
 		<!-- Three 
 			<section id="three" class="wrapper style3 special">
 				<div class="inner">
@@ -102,11 +105,30 @@
 		-->
 		<!-- Four -->
 			<section id="four" class="wrapper style2 special">
+				
 				<div class="inner">
 					<header class="major narrow">
 						<h2>Get in touch</h2>
 						<p>Contact me</p>
 					</header>
+
+					<?php if(array_key_exists('errors', $_SESSION)): ?>
+						
+						<div style="
+							margin: 10px 0px;
+							padding:12px;
+							color: #D8000C;
+							background-color: #FFD2D2;
+							margin:10px 22px;
+    						font-size:2em;
+    						vertical-align:middle;
+						">
+							test
+							<i class="fa fa-times-circle"></i>
+							<?= implode('<br>', $_SESSION['errors']);  ?>
+						</div>
+					<?php endif; ?>
+
 					<form action="post_contact.php" method="POST">
 						<div class="container 75%">
 							<div class="row uniform 50%">
