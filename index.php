@@ -104,7 +104,7 @@
 			</section>
 		-->
 		<!-- Four -->
-			<section id="four" class="wrapper style2 special">
+			<section id="contactme" class="wrapper style2 special">
 				
 				<div class="inner">
 					<header class="major narrow">
@@ -113,33 +113,55 @@
 					</header>
 
 					<?php if(array_key_exists('errors', $_SESSION)): ?>
-						
-						<div style="
-							margin: 10px 0px;
-							padding:12px;
-							color: #D8000C;
-							background-color: #FFD2D2;
-							margin:10px 22px;
-    						font-size:2em;
-    						vertical-align:middle;
-						">
-							test
-							<i class="fa fa-times-circle"></i>
+						<div class="container 75%">
+							<div style="
+								width:auto;
+								padding:12px;
+								color: #D8000C;
+								background-color: #FFD2D2;
+								margin:10px 22px;
+								margin-left:auto;
+								margin-right:auto;
+								font-size:1em;
+								vertical-align:middle;
+								border-radius:5px;
+							">
 							<?= implode('<br>', $_SESSION['errors']);  ?>
+							</div>
 						</div>
-					<?php endif; ?>
+					<?php  endif; ?>
+					<?php if(array_key_exists('success', $_SESSION)): ?>
+						<div class="container 75%">
+							<div style="
+								width:auto;
+								padding:12px;
+								color: #4F8A10;
+								background-color: #DFF2BF;
+								margin:10px 22px;
+								margin-left:auto;
+								margin-right:auto;
+								font-size:1em;
+								vertical-align:middle;
+								border-radius:5px;
+							">
+							Mail envoyé !
+							</div>
+						</div>
+					<?php  endif; ?>
 
 					<form action="post_contact.php" method="POST">
 						<div class="container 75%">
 							<div class="row uniform 50%">
 								<div class="6u 12u$(xsmall)">
-									<input name="name" placeholder="Name" type="text" id="inputname"/>
+									<input name="name" placeholder="Name" type="text" id="inputname" 
+									value="<?= isset($_SESSION['inputs']['name']) ? $_SESSION['inputs']['name'] : '' ?>"/>
 								</div>
 								<div class="6u$ 12u$(xsmall)">
-									<input name="email" placeholder="Email" type="email" id="inputmail" />
+									<input name="email" placeholder="Email" type="email" id="inputmail" 
+									value="<?= isset($_SESSION['inputs']['email']) ? $_SESSION['inputs']['email'] : '' ?>"/>
 								</div>
 								<div class="12u$">
-									<textarea name="message" placeholder="Message" rows="4" id="inputmessage"></textarea>
+									<textarea name="message" placeholder="Message" rows="4" id="inputmessage"><?= isset($_SESSION['inputs']['message']) ? $_SESSION['inputs']['message'] : '' ?></textarea>
 								</div>
 							</div>
 						</div>
@@ -187,3 +209,9 @@
 
 	</body>
 </html>
+
+<?php
+unset($_SESSION['inputs']);
+unset($_SESSION['success']);
+unset($_SESSION['errors']);
+?>

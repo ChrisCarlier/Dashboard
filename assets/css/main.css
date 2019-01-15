@@ -4253,6 +4253,6 @@ padding:12px;
 }
 .isa_info i, .isa_success i, .isa_warning i, .isa_error i {
     margin:10px 22px;
-    font-size:2em;
+    font-size:12px;
     vertical-align:middle;
 }
