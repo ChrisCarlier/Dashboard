@@ -20,9 +20,8 @@ if (!empty($errors)) {
 }else {
     $_SESSION['success'] = true;
     $errors = [];
-    $headers = 'FROM: site@local.dev';
-    $message = $_POST['message'];
-    mail('cj.carlier@gmail.com', 'Formulaire de contact', $message, $headers);
+    $headers = 'FROM: ' . $_POST['email'];
+    mail('cj.carlier@gmail.com', 'Formulaire de contact - '. $_POST['email'], $$_POST['message'], $headers);
     header('Location: index.php#contactme');
 }
 
