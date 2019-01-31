@@ -9,6 +9,19 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+				integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" 
+				crossorigin="anonymous">
+
+				<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+						integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+						crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+						integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" 
+						crossorigin="anonymous"></script>
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" 
+						integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" 
+						crossorigin="anonymous"></script>
 	</head>
 	<body class="landing">
 
@@ -33,7 +46,7 @@
 				<p>Dashboard</p>
 				<ul class="actions">
 					<!-- <li><a href="" class="button big special">Mon CV</a></li> -->
-					<li><a href="" class="button">Mon CV</a></li>
+					<li><a href="/OnlineResume" class="button" target="_blank">Mon CV</a></li>
 				</ul>
 			</section>
 
@@ -71,39 +84,24 @@
 			<section id="two" class="wrapper special">
 				<div class="inner">
 					<header class="major narrow">
-						<h2>Aliquam Blandit Mauris</h2>
-						<p>Ipsum dolor tempus commodo turpis adipiscing Tempor placerat sed amet accumsan</p>
+						<h2>Mes Projets</h2>
 					</header>
-					<div class="image-grid">
-						<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-						<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-						<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-						<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-						<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-						<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-						<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-						<a href="#" class="image"><img src="images/pic10.jpg" alt="" /></a>
+					<div class="row">
+					<div class="col-sm">
+						<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Movie Manager (WIP)</h5>
+							<p class="card-text">
+								Catalogue de film utilisant <b>Angular</b>, <b>Bootsrap</b> et l'<b>API de TMDB</b>
+							</p>
+							<a href="/MovieManager" class="button alt" target="_blank">Movie Manager</a>
+						</div>
+						</div>
 					</div>
-					<ul class="actions">
-						<li><a href="#" class="button big alt">Tempus Aliquam</a></li>
-					</ul>
+					</div>
 				</div>
 			</section>
 		
-		<!-- Three 
-			<section id="three" class="wrapper style3 special">
-				<div class="inner">
-					<header class="major narrow	">
-						<h2>Magna sed consequat tempus</h2>
-						<p>Ipsum dolor tempus commodo turpis adipiscing Tempor placerat sed amet accumsan</p>
-					</header>
-					<ul class="actions">
-						<li><a href="#" class="button big alt">Magna feugiat</a></li>
-					</ul>
-				</div>
-			</section>
-		-->
-		<!-- Four -->
 			<section id="contactme" class="wrapper style2 special">
 				
 				<div class="inner">
